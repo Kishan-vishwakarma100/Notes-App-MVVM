@@ -3,11 +3,14 @@ package com.example.notesappmvvm.ui.Adapter
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.example.notesappmvvm.Model.Notes
 import com.example.notesappmvvm.R
 import com.example.notesappmvvm.databinding.ItemNotesBinding
-import com.example.notesappmvvm.ui.Fragments.HomeFragment
+import com.example.notesappmvvm.ui.Fragments.HomeFragmentDirections
+
+//import com.example.notesappmvvm.ui.Fragments.HomeFragmentDirections
 
 class NotesAdapter(val requireContext: Context,val notesList: List<Notes>) :
     RecyclerView.Adapter<NotesAdapter.notesViewHolder>() {
@@ -35,7 +38,8 @@ class NotesAdapter(val requireContext: Context,val notesList: List<Notes>) :
             }
         }
         holder.binding.root.setOnClickListener {
-
+            val action = HomeFragmentDirections.actionHomeFragmentToEditNotesFragment()
+            Navigation.findNavController(it).navigate(action)
 
         }
     }
