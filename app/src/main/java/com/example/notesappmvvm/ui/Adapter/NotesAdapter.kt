@@ -10,7 +10,6 @@ import com.example.notesappmvvm.R
 import com.example.notesappmvvm.databinding.ItemNotesBinding
 import com.example.notesappmvvm.ui.Fragments.HomeFragmentDirections
 
-//import com.example.notesappmvvm.ui.Fragments.HomeFragmentDirections
 
 class NotesAdapter(val requireContext: Context,val notesList: List<Notes>) :
     RecyclerView.Adapter<NotesAdapter.notesViewHolder>() {
@@ -38,7 +37,7 @@ class NotesAdapter(val requireContext: Context,val notesList: List<Notes>) :
             }
         }
         holder.binding.root.setOnClickListener {
-            val action = HomeFragmentDirections.actionHomeFragmentToEditNotesFragment()
+            val action = HomeFragmentDirections.actionHomeFragmentToEditNotesFragment(data)
             Navigation.findNavController(it).navigate(action)
 
         }

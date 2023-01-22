@@ -24,6 +24,7 @@ class CreateNotesFragment : Fragment() {
     lateinit var binding:FragmentCreateNotesBinding
     var priority: String = "1"
     val viewModel : NotesViewModel by viewModels()
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -59,6 +60,7 @@ class CreateNotesFragment : Fragment() {
     }
 
     private fun createNotes(it: View?) {
+
         val title = binding.edtTitle.text.toString()
         val subTitle = binding.edtSubTitle.text.toString()
         val notes = binding.edtNotes.text.toString()
