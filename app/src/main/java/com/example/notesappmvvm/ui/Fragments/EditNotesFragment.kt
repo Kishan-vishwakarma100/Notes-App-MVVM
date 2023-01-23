@@ -8,6 +8,7 @@ import androidx.fragment.app.Fragment
 import android.widget.Toast
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
 import com.example.notesappmvvm.Model.Notes
 import com.example.notesappmvvm.R
@@ -17,6 +18,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 import java.util.*
 
 
+@Suppress("DEPRECATION")
 class EditNotesFragment : Fragment() {
     val oldNotes by navArgs<EditNotesFragmentArgs>()
     lateinit var binding: FragmentEditNotesBinding
@@ -123,6 +125,7 @@ class EditNotesFragment : Fragment() {
             textViewYes?.setOnClickListener {
                 viewModel.deleteNotes(oldNotes.data.id!!)
                 bottomSHeet.dismiss()
+                it.findNavController().navigate(R.id.action_editNotesFragment_to_homeFragment)
             }
             textViewNo?.setOnClickListener {
                 bottomSHeet.dismiss()

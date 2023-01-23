@@ -16,6 +16,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="6dp"
+            android:paddingBottom="6dp"
             android:gravity="center_vertical"
             android:orientation="horizontal"
             app:layout_constraintEnd_toEndOf="parent"
@@ -24,8 +25,8 @@
 
             <ImageView
                 android:id="@+id/allNotes"
-                android:layout_width="32dp"
-                android:layout_height="32dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:layout_margin="5dp"
                 android:padding="3dp"
                 android:src="@drawable/btn_filter"

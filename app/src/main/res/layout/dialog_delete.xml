@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/delete_sheet"
     android:orientation="vertical">
     <View
         android:layout_width="80dp"
@@ -13,6 +14,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
+        android:textColor="@color/white"
         android:fontFamily="@font/bold"
         android:textSize="17sp"
         android:text="Are you sure want to delete\n This Note?"/>
