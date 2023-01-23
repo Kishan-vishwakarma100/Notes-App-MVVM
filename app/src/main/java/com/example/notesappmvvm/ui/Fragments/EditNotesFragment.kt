@@ -6,10 +6,12 @@ import android.view.*
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.viewModels
 import androidx.navigation.Navigation
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.navArgs
+import androidx.navigation.ui.NavigationUI
 import com.example.notesappmvvm.Model.Notes
 import com.example.notesappmvvm.R
 import com.example.notesappmvvm.ViewModel.NotesViewModel
@@ -105,7 +107,9 @@ class EditNotesFragment : Fragment() {
         Toast.makeText(requireContext(),"Notes Updated Successfully", Toast.LENGTH_SHORT).show()
 
         Navigation.findNavController(it!!).navigate(R.id.action_editNotesFragment_to_homeFragment)
+
     }
+
 
     @Deprecated("Deprecated in Java")
     override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
@@ -125,10 +129,11 @@ class EditNotesFragment : Fragment() {
             textViewYes?.setOnClickListener {
                 viewModel.deleteNotes(oldNotes.data.id!!)
                 bottomSHeet.dismiss()
-                it.findNavController().navigate(R.id.action_editNotesFragment_to_homeFragment)
+
             }
             textViewNo?.setOnClickListener {
                 bottomSHeet.dismiss()
+
             }
             bottomSHeet.show()
         }

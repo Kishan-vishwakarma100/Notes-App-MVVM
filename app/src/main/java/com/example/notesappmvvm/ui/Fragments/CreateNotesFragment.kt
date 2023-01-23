@@ -56,6 +56,7 @@ class CreateNotesFragment : Fragment() {
         binding.btnSaveNotes.setOnClickListener{
             createNotes(it)
         }
+
         return binding.root
     }
 
@@ -79,6 +80,7 @@ class CreateNotesFragment : Fragment() {
         Toast.makeText(requireContext(),"Notes Created Successfully",Toast.LENGTH_SHORT).show()
 
         Navigation.findNavController(it!!).navigate(R.id.action_createNotesFragment_to_homeFragment)
+
     }
 
 

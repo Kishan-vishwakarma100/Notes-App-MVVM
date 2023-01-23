@@ -22,7 +22,7 @@
             android:fontFamily="@font/regular"
             android:maxLines="1"
             android:layout_marginTop="10dp"
-            android:textColorHint="#D1D1D1"
+            android:textColorHint="@color/black"
             android:hint="Title.."/>
 
         <EditText
@@ -34,7 +34,7 @@
             android:fontFamily="@font/regular"
             android:maxLines="1"
             android:layout_marginTop="10dp"
-            android:textColorHint="#D1D1D1"
+            android:textColorHint="@color/black"
             android:hint="Subtitle.."/>
 
         <LinearLayout
@@ -76,7 +76,7 @@
             android:fontFamily="@font/regular"
             android:gravity="start"
             android:layout_marginTop="10dp"
-            android:textColorHint="#D1D1D1"
+            android:textColorHint="@color/black"
             android:hint="Notes.."/>
 
     </LinearLayout>
